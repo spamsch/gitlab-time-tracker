@@ -267,6 +267,21 @@ class cli {
 
         return this.data.iids;
     }
+
+    /**
+     * parse the args and return the project argument
+     * @returns {*}
+     */
+    username() {
+        if (!this.args[0] && !this.data.username) return null;
+
+        if (this.data.username) return this.data.username;
+
+        let usernames = _.uniq(_.filter(this.args, arg => !Number.isNaN(new Number(arg))));
+        this.args = _.difference(this.args, usernames);
+
+        return this.data.username = usernames;
+    }
 }
 
 module.exports = cli;
