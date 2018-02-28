@@ -105,6 +105,11 @@ class issue extends hasTimes {
     get _typeSingular() {
         return 'Issue';
     }
+
+    toString() {
+        return `${this.title}`;
+    }
+
 }
 
 module.exports = issue;
