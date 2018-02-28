@@ -21,7 +21,10 @@ class project extends Base {
      */
     make(name) {
         let promise = this.get(`projects/${encodeURIComponent(name)}`);
-        promise.then(project => this.data = project.body);
+        promise.then((project_data) => {
+            this.data = project_data.body;
+            return promise;
+        });
 
         return promise;
     }
