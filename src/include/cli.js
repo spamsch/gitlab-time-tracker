@@ -84,6 +84,10 @@ class cli {
         process.stdout.write(string);
     }
 
+    static print(message) {
+        cli.out(`${message}\n`);
+    }
+
     /**
      * print done message
      */
