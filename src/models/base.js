@@ -67,6 +67,9 @@ class base {
         path += `&page=${page}&per_page=${perPage}`;
 
         return new Promise((resolve, reject) => {
+            if (this.config.get('_verbose')) {
+                console.log(`${this.url}${path}`);
+            }
             request(`${this.url}${path}`, {
                 json: true,
                 insecure: this._insecure,
