@@ -818,6 +818,13 @@ So this would be a very helpful thing to contribute but of course all contributi
 * Please work in your own branch, e.g. `integrate-awesome-feature`, `fix-awful-bug`, `improve-this-crappy-docs`
 * Create a pull request to the `dev` branch
 
+#### debugging
+
+If it happens that you want to debug gtt while making a contribution then be aware of the
+fact that gtt.js spawns sub-processes for each command. This is not supported by the Node.js
+debugger. It will stop execution by telling you that `the address is already in use`. In order
+to resolve this just invoke `node inspect` on the command directly.
+
 ## buy me a beer
 
 gtt is an open source project, developed and maintained completely in my free time.
