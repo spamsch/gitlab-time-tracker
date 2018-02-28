@@ -9,7 +9,7 @@ class project extends Base {
      * @param config
      * @param data
      */
-    constructor(config, data) {
+    constructor(config, data = {}) {
         super(config);
         this.data = data;
         this.projectMembers = data.members ? data.members : [];
