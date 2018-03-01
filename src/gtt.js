@@ -17,5 +17,5 @@ program
     .command('delete [id]', 'delete time record by the given id')
     .command('report [project] [ids]', 'generate a report for the given project and issues')
     .command('config', 'edit the configuration file in your default editor')
-    .command('show', 'filter all issues inside gitlab by criteria')
+    .command('list', 'filter all issues inside gitlab by criteria')
     .parse(process.argv);
