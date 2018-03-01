@@ -15,8 +15,9 @@ class user extends Base {
     	let promise = this.get(`users?username=${username}`);
 
     	promise.then((userdata) => {
-    		this.data = userdata.body;
-    		return promise;
+    		this.data = userdata.body[0];
+
+            return promise;
     	});
 
     	return promise;
